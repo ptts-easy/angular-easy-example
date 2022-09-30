@@ -16,6 +16,14 @@ const routerRoutes: Routes = [
     loadChildren: () => import('../route-page/route-page.module').then(m => m.RoutePageModule)
   },
   { 
+    path: 'input',
+    loadChildren: () => import('../input-page/input-page.module').then(m => m.InputPageModule)
+  },
+  { 
+    path: 'lifecycle',
+    loadChildren: () => import('../hook-page/hook-page.module').then(m => m.HookPageModule)
+  },
+  { 
     path: 'event',
     loadChildren: () => import('../event-page/event-page.module').then(m => m.EventPageModule)
   },

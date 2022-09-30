@@ -1,0 +1,15 @@
+<div style="border:5px solid white;">
+  This is Input Page.
+  <h2>My Heroes</h2>
+
+  <ul class="heroes">
+    <li *ngFor="let hero of heroes">
+      <button [class.selected]="hero === selectedHero" type="button" (click)="onSelect(hero)">
+        <span class="badge">{{hero.id}}</span>
+        <span class="name">{{hero.name}}</span>
+      </button>
+    </li>
+  </ul>
+
+  <app-input-page-child [hero]="selectedHero"></app-input-page-child>
+</div>

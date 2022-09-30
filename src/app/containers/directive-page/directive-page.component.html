@@ -1,3 +1,32 @@
-<div>
-  This is Directive Page.
+<div style="border:5px solid white;" class="directive">
+  This is DirectivePage(class, style).
+  <table>
+  <tbody>
+  <tr>
+    <td>
+      <ul>
+        <li *ngFor="let item of colors;" style="color: {{ item }};" (click)="setMyClass(item)">
+          {{ item }}
+        </li>      
+      </ul>
+    </td>
+    <td><h1 [ngClass]="myclass">My class is {{ myclass }}!</h1></td>
+  </tr>
+  </tbody>
+  </table>
+
+  <table>
+  <tbody>
+  <tr>
+    <td>
+      <ul>
+        <li *ngFor="let item of colors;" style="color: {{ item }};" (click)="setColor(item)">
+          {{ item }}
+        </li>        
+      </ul>
+    </td>
+    <td><h1 [ngStyle]="myStyle">My style is {{ myStyle }}!</h1></td>
+  </tr>
+  </tbody>
+  </table>
 </div>

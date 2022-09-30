@@ -11,8 +11,10 @@ export class NavComponent implements OnInit {
     ["directive", "Directive"],
     ["layout", "Layout"],
     ["route", "Route"],
-    ["state", "State"],
-    ["prop", "Prop/Hook/Lifecycle"],
+    ["input", "Input"],
+    ["lifecycle", "Lifecycle"],
+    
+    ["event", "Event"],
     ["contain", "Contain"],
     ["context", "Context"],
     ["reducer", "Reducer"],
