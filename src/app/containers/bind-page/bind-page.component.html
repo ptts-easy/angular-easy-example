@@ -1,0 +1,25 @@
+<div>
+  This is BindPage.
+</div>
+<p>
+  class member var = {{m_var}}
+</p>
+<p>=================== set title ===================</p>
+<label>
+  Title &nbsp;:&nbsp;
+  <input 
+    type="text" 
+    id="title" 
+    name="title"
+    value={{title}}
+    (keyup)="titleChange($event)"
+  />
+</label>
+<p>=================== Two-way binding ===================</p>
+<h2>{{hero.name | uppercase}} Details</h2>
+<div><span>id: </span>{{hero.id}}</div>
+<div><span>name: </span>{{hero.name}}</div>
+<div>
+  <label for="name">Hero name: </label>
+  <input id="name" [(ngModel)]="hero.name" placeholder="name">
+</div>

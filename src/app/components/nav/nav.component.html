@@ -1,0 +1,10 @@
+<div>
+  <nav>
+    <ul>
+      <li *ngFor="let item of menu; index as i;">
+        <a routerLink="{{ item[0] }}">{{ item[1] }}</a>
+      </li>
+    </ul>
+  </nav>
+  <router-outlet></router-outlet>
+</div>
