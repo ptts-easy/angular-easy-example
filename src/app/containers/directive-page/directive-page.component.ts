@@ -1,15 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { Hero } from '../../classes/hero';
+import { HEROES } from '../../classes/hero';
 
 @Component({
   selector: 'app-directive-page',
   templateUrl: './directive-page.component.html',
   styleUrls: ['./directive-page.component.css']
 })
+
 export class DirectivePageComponent implements OnInit {
   myclass = "class_white";
   myStyle = {"color": "white"};
 
   colors = ["white", "black", "red", "green", "blue", "yellow", "magenta", "cyan"];
+
+  heroes = HEROES;
+  selectedHero?: Hero;
 
   constructor() {
   }
@@ -23,5 +29,9 @@ export class DirectivePageComponent implements OnInit {
 
   setColor(color: string) {
     this.myStyle = {"color": color};
+  }
+
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
   }
 }

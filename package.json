@@ -2,8 +2,8 @@
   "name": "angular-easy-example",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng --port 14200",
-    "start": "ng serve",
+    "ng": "ng",
+    "start": "ng serve --port 14200",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"

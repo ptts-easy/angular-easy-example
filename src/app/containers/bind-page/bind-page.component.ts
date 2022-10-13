@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Hero } from '../../classes//hero';
-import { HEROES } from '../../classes/hero';
+import { Hero } from '../../classes/hero';
 
 @Component({
   selector: 'app-bind-page',
@@ -14,14 +13,11 @@ export class BindPageComponent implements OnInit {
 
   clock_id = 0;
   time_clock = "00:00:00";
-  
+
   hero: Hero = {
     id: 1,
     name: 'Windstorm'
   };
-
-  heroes = HEROES;
-  selectedHero?: Hero;
 
   constructor() { }
 
@@ -48,9 +44,5 @@ export class BindPageComponent implements OnInit {
         <h2>It is ${new Date().toLocaleTimeString()}.</h2>
       </div>
     `;
-  }
-
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
   }
 }
