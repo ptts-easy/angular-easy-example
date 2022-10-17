@@ -3,17 +3,17 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
-import { InputPageComponent } from './input-page.component';
-import { ChildComponent } from './child/child.component';
+import { ParentPageComponent } from './parent-page.component';
+import { ChildPageComponent } from './child-page/child-page.component';
 
 const myRoutes: Routes = [
-  { path: '', component: InputPageComponent }
+  { path: '', component: ParentPageComponent }
 ];
 
 @NgModule({
   declarations: [
-    InputPageComponent,
-    ChildComponent
+    ParentPageComponent,
+    ChildPageComponent
   ],
   imports: [
     CommonModule,
@@ -21,8 +21,8 @@ const myRoutes: Routes = [
     RouterModule.forChild(myRoutes)
   ],
   exports: [
-    InputPageComponent,
-    ChildComponent
+    ParentPageComponent,
+    ChildPageComponent
   ]
 })
-export class InputPageModule { }
+export class ParentPageModule { }

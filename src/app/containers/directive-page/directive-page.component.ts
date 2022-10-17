@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild} from '@angular/core';
 import { Hero } from '../../classes/hero';
 import { HEROES } from '../../classes/hero';
 
@@ -9,13 +9,21 @@ import { HEROES } from '../../classes/hero';
 })
 
 export class DirectivePageComponent implements OnInit {
+
   myclass = "class_white";
   myStyle = {"color": "white"};
 
   colors = ["white", "black", "red", "green", "blue", "yellow", "magenta", "cyan"];
 
+  hero: Hero = {
+    id: 1,
+    name: 'Windstorm'
+  };
+
   heroes = HEROES;
   selectedHero?: Hero;
+
+  color = '';
 
   constructor() {
   }

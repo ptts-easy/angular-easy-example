@@ -1,0 +1,19 @@
+<div style="border:5px solid white;">
+  This is Parent Page.
+  <h2>My Heroes</h2>
+
+  <ul class="heroes">
+    <li *ngFor="let hero of heroes">
+      <button [class.selected]="hero === selectedHero" type="button" (click)="onSelect(hero)">
+        <span class="badge">{{hero.id}}</span>
+        <span class="name">{{hero.name}}</span>
+      </button>
+    </li>
+  </ul>
+  <p>=================== to Client (Input) ===================</p>
+  <app-child-page [hero]="selectedHero"></app-child-page>
+  <p>=================== get Client (ViewChild) ===================</p>
+  <app-child-page [hero]="selectedHero" #childPage (click)="onClick()"></app-child-page>  
+  <p>=================== get Native Element (ViewChild::ElementRef) ===================</p>
+  <h2 #title>Hero Information:</h2>
+</div>

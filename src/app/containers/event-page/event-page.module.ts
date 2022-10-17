@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
 import { EventPageComponent } from './event-page.component';
+import { InputOutputPageComponent } from './input-output-page/input-output-page.component';
 
 const myRoutes: Routes = [
   { path: '', component: EventPageComponent }
@@ -10,14 +11,16 @@ const myRoutes: Routes = [
 
 @NgModule({
   declarations: [
-    EventPageComponent
+    EventPageComponent,
+    InputOutputPageComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(myRoutes)
   ],
   exports: [
-    EventPageComponent
+    EventPageComponent,
+    InputOutputPageComponent
   ]
 })
 export class EventPageModule { }

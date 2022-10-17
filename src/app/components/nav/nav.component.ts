@@ -11,16 +11,10 @@ export class NavComponent implements OnInit {
     ["directive", "Directive"],
     ["layout", "Layout"],
     ["route", "Route"],
-    ["input", "Input"],
+    ["parent", "Parent/Child"],
     ["lifecycle", "Lifecycle"],
     
-    ["event", "Event"],
-    ["contain", "Contain"],
-    ["context", "Context"],
-    ["reducer", "Reducer"],
-    ["redux", "Redux"],
-    ["sass", "Sass"],
-    ["bootstrap", "Bootstrap"],
+    ["event", "Event"]
   ];
 
   constructor() {

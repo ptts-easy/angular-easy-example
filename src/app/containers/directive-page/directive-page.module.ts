@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
+import { HighlightDirective } from './highlight.directive';
 import { DirectivePageComponent } from './directive-page.component';
 
 const myRoutes: Routes = [
@@ -11,6 +12,7 @@ const myRoutes: Routes = [
 
 @NgModule({
   declarations: [
+    HighlightDirective,
     DirectivePageComponent
   ],
   imports: [

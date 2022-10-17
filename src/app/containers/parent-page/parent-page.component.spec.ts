@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InputPageComponent } from './Input-page.component';
+import { ParentPageComponent } from './parent-page.component';
 
-describe('InputPageComponent', () => {
-  let component: InputPageComponent;
-  let fixture: ComponentFixture<InputPageComponent>;
+describe('ParentPageComponent', () => {
+  let component: ParentPageComponent;
+  let fixture: ComponentFixture<ParentPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ InputPageComponent ]
+      declarations: [ ParentPageComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(InputPageComponent);
+    fixture = TestBed.createComponent(ParentPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

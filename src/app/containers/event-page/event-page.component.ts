@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-event-page',
@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./event-page.component.css']
 })
 export class EventPageComponent implements OnInit {
+  @ViewChild('newItem') newItem!: ElementRef;
 
+  currentItem = 'Television';
+  
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  outputItem(newItem: string) {
+    this.newItem.nativeElement.textContent = newItem;
+  }
 }

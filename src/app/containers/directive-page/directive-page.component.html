@@ -1,54 +1,82 @@
-<div style="border:5px solid white;" class="directive">
+<div style="border:5px solid white;">
   This is DirectivePage.
-  <p>=================== class ([ngClass]) ===================</p>
-  <table>
-  <tbody>
-  <tr>
-    <td>
-      <ul>
-        <li *ngFor="let item of colors;" style="color: {{ item }};" (click)="setMyClass(item)">
-          {{ item }}
-        </li>      
-      </ul>
-    </td>
-    <td><h1 [ngClass]="myclass">My class is {{ myclass }}!</h1></td>
-  </tr>
-  </tbody>
-  </table>
-  <p>=================== style ([ngStyle]) ===================</p>
-  <table>
-  <tbody>
-  <tr>
-    <td>
-      <ul>
-        <li *ngFor="let item of colors;" style="color: {{ item }};" (click)="setColor(item)">
-          {{ item }}
-        </li>        
-      </ul>
-    </td>
-    <td><h1 [ngStyle]="myStyle">My style is {{ myStyle.color }}!</h1></td>
-  </tr>
-  </tbody>
-  </table>
-</div>
-<div>
-  <p>=================== Directive (ngFor)===================</p>
-  <h2>My Heroes</h2>
-  <ul class="heroes">
-    <li *ngFor="let hero of heroes">
-      <button [class.selected]="hero === selectedHero" type="button" (click)="onSelect(hero)">
-        <span class="badge">{{hero.id}}</span>
-        <span class="name">{{hero.name}}</span>
-      </button>
-    </li>
-  </ul>
-  <p>=================== Directive (ngIf)===================</p>
-  <div *ngIf="selectedHero">
-    <h2>{{selectedHero.name | uppercase}} Details</h2>
-    <div>id: {{selectedHero.id}}</div>
+  <p>=================== Built-in Directives ===================</p>
+  <div class="directive">
+    <p>=================== class ([ngClass]) ===================</p>
+    <table>
+    <tbody>
+    <tr>
+      <td>
+        <ul>
+          <li *ngFor="let item of colors;" style="color: {{ item }};" (click)="setMyClass(item)">
+            {{ item }}
+          </li>      
+        </ul>
+      </td>
+      <td><h1 [ngClass]="myclass">My class is {{ myclass }}!</h1></td>
+    </tr>
+    </tbody>
+    </table>
+    <p>=================== style ([ngStyle]) ===================</p>
+    <table>
+    <tbody>
+    <tr>
+      <td>
+        <ul>
+          <li *ngFor="let item of colors;" style="color: {{ item }};" (click)="setColor(item)">
+            {{ item }}
+          </li>        
+        </ul>
+      </td>
+      <td><h1 [ngStyle]="myStyle">My style is {{ myStyle.color }}!</h1></td>
+    </tr>
+    </tbody>
+    </table>
+    <p>=================== Directive (ngModel)===================</p>
+    <h2>{{hero.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{hero.id}}</div>
+    <div><span>name: </span>{{hero.name}}</div>
     <div>
-      <label for="hero-name">Hero name: </label>
-      <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
+      <label for="name">Hero name: </label>
+      <input id="name" [(ngModel)]="hero.name" placeholder="name">
     </div>
-  </div>  
+  </div>
+  <div>
+    <p>=================== Directive (ngFor)===================</p>
+    <h2>My Heroes</h2>
+    <ul class="heroes">
+      <li *ngFor="let hero of heroes">
+        <button [class.selected]="hero === selectedHero" type="button" (click)="onSelect(hero)">
+          <span class="badge">{{hero.id}}</span>
+          <span class="name">{{hero.name}}</span>
+        </button>
+      </li>
+    </ul>
+    <p>=================== Directive (ngIf)===================</p>
+    <div *ngIf="selectedHero">
+      <h2>{{selectedHero.name | uppercase}} Details</h2>
+      <div>id: {{selectedHero.id}}</div>
+      <div>
+        <label for="hero-name">Hero name: </label>
+        <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
+      </div>
+    </div>
+  </div>
+  <p>=================== Attribute Directives ===================</p>
+  <h1>My First Attribute Directive</h1>
+
+  <h2>Pick a highlight color</h2>
+  <div>
+    <input type="radio" name="colors" checked="checked" (click)="color='violet'">Violet
+    <input type="radio" name="colors" (click)="color='lightgreen'">Green
+    <input type="radio" name="colors" (click)="color='yellow'">Yellow
+    <input type="radio" name="colors" (click)="color='cyan'">Cyan
+  </div>
+
+  <p [appHighlight]="color" defaultColor="violet">
+    Highlight me!
+  </p>
+  <p [appHighlight]="color" defaultColor="violet">
+    Highlight me too!
+  </p>
 </div>

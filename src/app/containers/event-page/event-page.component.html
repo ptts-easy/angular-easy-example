@@ -1,3 +1,12 @@
-<div>
+<div style="border:5px solid white;">
   This is Event Page.
+  <p>=================== Input ===================</p>
+  <div>
+    <app-input-output-page [item]="currentItem" (newItemEvent)="outputItem($event)">
+    </app-input-output-page>
+  </div>
+  <p>=================== Output ===================</p>
+  <div>
+    <h2 #newItem>Hero is Output:</h2>
+  </div>
 </div>

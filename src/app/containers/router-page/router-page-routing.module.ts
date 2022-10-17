@@ -8,6 +8,10 @@ const routerRoutes: Routes = [
     loadChildren: () => import('../bind-page/bind-page.module').then(m => m.BindPageModule)
   },
   { 
+    path: 'directive',
+    loadChildren: () => import('../directive-page/directive-page.module').then(m => m.DirectivePageModule)
+  },
+  { 
     path: 'layout', 
     loadChildren: () => import('../layout-page/layout-page.module').then(m => m.LayoutPageModule)
   },
@@ -16,8 +20,8 @@ const routerRoutes: Routes = [
     loadChildren: () => import('../route-page/route-page.module').then(m => m.RoutePageModule)
   },
   { 
-    path: 'input',
-    loadChildren: () => import('../input-page/input-page.module').then(m => m.InputPageModule)
+    path: 'parent',
+    loadChildren: () => import('../parent-page/parent-page.module').then(m => m.ParentPageModule)
   },
   { 
     path: 'lifecycle',
@@ -26,10 +30,6 @@ const routerRoutes: Routes = [
   { 
     path: 'event',
     loadChildren: () => import('../event-page/event-page.module').then(m => m.EventPageModule)
-  },
-  { 
-    path: 'directive',
-    loadChildren: () => import('../directive-page/directive-page.module').then(m => m.DirectivePageModule)
   }
 ];
 
